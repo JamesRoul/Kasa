@@ -1,0 +1,109 @@
+.header {
+    width: 100%; /* Ancho especificado */
+    height: 68px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    gap: 700px;
+    background-color: white;
+    color: #FF6060; /* Cambiado a rojo específico */
+    padding: 1rem 2rem;
+    padding-top: 50px;
+   
+}
+
+.logo img {
+    width: 210.32154846191406px;
+    height: 68px;
+}
+
+.nav {
+    display: flex;
+    gap: 1rem;
+}
+
+.nav a {
+    font-family: 'Montserrat', sans-serif; /* Asegúrate de tener la fuente Montserrat cargada en tu proyecto */
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 34px;
+    letter-spacing: 0em;
+    text-align: right;
+    color: #FF6060; /* Cambiado a rojo específico */
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s;
+}
+
+.nav a:hover {
+    text-decoration: underline; /* Agregado para subrayar al hacer hover */
+}
+
+
+/* Media Query para pantallas con un ancho máximo de 768px */
+@media (max-width: 768px) {
+
+    #root {
+        width: 100%;
+    }
+    body {
+        width: 100%;
+        margin: auto;
+    }
+    .header {
+        width: 100%; /* Ancho especificado */
+        height: 48px; 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        background-color: white;
+        color: #FF6060; /* Cambiado a rojo específico */
+        padding: 1rem 2rem;
+        padding-top: 30px;
+        gap: 50px;
+       left: 0;
+        padding-left: 0;
+        padding-right: 0;
+       
+    }
+    
+    .logo img {
+        width: 130px;
+        height: 48px;
+       
+    }
+    
+    .nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 5px;
+        
+    }
+    
+    .nav a {
+        font-family: 'Montserrat', sans-serif; /* Asegúrate de tener la fuente Montserrat cargada en tu proyecto */
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 34px;
+        letter-spacing: 0em;
+        text-align: right;
+        color: #FF6060; /* Cambiado a rojo específico */
+        text-decoration: none;
+        padding: 0;
+        
+       
+        margin-bottom: 10px;
+        transition: background-color 0.3s;
+    }
+    
+    .nav a:hover {
+        text-decoration: underline; /* Agregado para subrayar al hacer hover */
+    }
+    
+  }
+  
+  
+  

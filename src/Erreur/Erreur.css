@@ -1,0 +1,32 @@
+/* Estilos para el contenedor de error */
+.erreur-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  /* Estilos para el título del error */
+  .error-title {
+    font-family: Montserrat;
+    font-size: 288px;
+    font-weight: 700;
+    line-height: 411px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #ff6060; /* Color rojo */
+    margin-bottom: 20px;
+  }
+  
+  /* Estilos para el texto de error */
+  .error-text {
+    font-family: Montserrat;
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 51px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #ff6060;
+  }
+  

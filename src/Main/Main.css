@@ -1,0 +1,123 @@
+/* Estilos generales para el contenedor principal */
+.main {
+    max-width: 1240px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+/* Estilos para la imagen principal */
+/* Estilos para la imagen principal */
+.main-image-container {
+    
+    max-width: 1240px;
+    width: 100%;
+        height: 223px;
+        border-radius: 25px;
+        position: relative;
+        margin-bottom: 56px;
+        overflow: hidden;
+    
+}
+
+
+
+.main-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 68px;
+    text-align: center;
+    color: white;
+    position: absolute;
+    top: 60px;
+    width: 705px;
+    height: 68px;
+    left: 267px; /* Ajusta este valor para centrar el texto horizontalmente */
+}
+
+.main-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta la imagen para que cubra el contenedor sin deformarse */
+    filter: brightness(0.8);
+}
+/* Estilos para el contenedor de las cards */
+.main .card-container {
+    max-width: 1240px;
+    width: 100%;
+    background-color: #F6F6F6;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #F6F6F6;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+    padding-left: 70px; /* Ajusta este padding si es necesario */
+    padding-bottom: 56px;
+    gap: 0px; /* Ajusta este gap si es necesario */
+}
+
+/* Si las cards ya tienen sus propios estilos, no es necesario agregar más estilos aquí. 
+   Pero si necesitas algún ajuste específico para las cards dentro de este contenedor, 
+   puedes agregarlo aquí. */
+
+   @media (max-width: 768px) {
+    /* Estilos para el contenedor principal */
+    .main {
+      width: 100% !important;/* Ajusta al ancho total de la pantalla */
+      padding: 0; /* Añade un poco de padding a los lados */
+      margin-left: 0;
+      margin-right: 0;
+      align-items: center;
+      justify-content: center;
+
+    }
+  
+    /* Estilos para la imagen principal */
+    .main-image-container {
+      width: 100%; /* Ajusta al ancho total de la pantalla */
+      height: auto; /* Deja que la altura sea automática */
+    }
+  
+    /* Ajustes para el texto en la imagen principal */
+    .main-text {
+      font-size: 20px; /* Tamaño de fuente más pequeño */
+      top: 30px; /* Ajusta la posición superior */
+      left: auto; /* Centrado automático */
+      right: auto; /* Centrado automático */
+      width: 100%; /* Ancho total */
+      text-align: center; /* Alineación central del texto */
+    }
+  
+    /* Estilos para el contenedor de las cards */
+    .main .card-container {
+      width: 100%; /* Ajusta al ancho total de la pantalla */
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap; /* Una card por línea */
+      padding-left: 0; /* Elimina el padding izquierdo */
+      padding-right: 0; /* Elimina el padding derecho */
+      gap: 20px; /* Ajusta este gap si es necesario */
+      margin-left: auto;
+      margin-right: auto;
+      align-items: center;
+      justify-content: center;
+    }
+    .main-image-container {
+    
+    
+        width: 90%;
+            height: 123px;
+            border-radius: 25px;
+            position: relative;
+            margin-bottom: 56px;
+            overflow: hidden;
+        
+    }
+  }

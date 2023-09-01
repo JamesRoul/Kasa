@@ -1,0 +1,53 @@
+.card {
+    width: 340px;
+    height: 340px;
+    position: relative; /* Para posicionar el título en la parte inferior */
+    margin-top: 56px;
+    margin-left: 0px;
+    background: linear-gradient(180deg, rgba(207, 135, 135, 0.5) 50%, rgba(211, 135, 135, 0.5) 40%), #FF6060;
+    text-decoration: none; /* Elimina el subrayado del enlace */
+    color: #FFFFFF; /* Color de texto blanco */
+    overflow: hidden; /* Asegura que la imagen no se desborde */
+    transition: all 0ms; /* Animación instantánea */
+    border-radius: 15px;
+}
+
+
+.card-image {
+    width: 340px;
+height: 250px;
+
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+
+    display: block; /* Asegura que la imagen ocupe todo el ancho del contenedor */
+}
+
+.card-title {
+    padding-top: 20px;
+    font-family: 'Montserrat', sans-serif;
+    width: 200px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 26px;
+    text-align: left;
+    position: absolute; /* Posiciona el título en la parte inferior */
+    bottom: 10px; /* Espacio desde la parte inferior */
+    left: 10px; /* Espacio desde la izquierda */
+}
+
+
+
+@media (max-width: 768px) {
+    
+    .card {
+        width: 90%;
+    }
+    .card-image {
+        width: 100%;
+        height: 75%;
+    }
+   
+    
+}
+

@@ -1,0 +1,494 @@
+/** le carusel **/
+
+.carousel {
+  position: relative;
+  max-width: 1240px;
+  width: 100%;
+  height: 540px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.carousel-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;/* Ajustar la imagen para que llene el contenedor */
+  
+}
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 80px;
+  cursor: pointer;
+  z-index: 1;
+  color: #e3e3e3;
+}
+.carousel-button-prev {
+  left: 0;
+}
+
+.carousel-button-next {
+  right: 0;
+}
+.indicator {
+  position: absolute;
+  bottom: 10px;
+  background-color: none;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  right: 600px;
+}
+
+
+/** le reste **/
+  
+  .gauchedroiteinfo {
+     max-width: 1240px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  
+  /* Estilos para la sección del título, ubicación y tags */
+  .gauche {
+    font-family: Montserrat;
+    font-size: 26px;
+    font-weight: 500;
+    line-height: 51px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #ff6060;
+    margin-bottom: 5px;
+  }
+  
+  .location {
+    font-family: Montserrat;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #ff6060;
+    margin-bottom: 10px;
+  }
+  
+  .tags {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .tag {
+    width: 115px;
+    height: 25px;
+    background: #ff6060;
+    border-radius: 10px;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Estilos para la sección del anfitrión */
+  .droite {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  
+  /* Estilos para el contenedor de la foto del host */
+  .host {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 20px;
+    gap: 10px;
+  }
+  
+  /* Estilos para la foto del host en un círculo */
+  .host-picture {
+    width: 64px;
+    height: 64px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  .host-lastname {
+    margin-top: 5px;
+  }
+  
+  
+  /* Estilos para el nombre del host */
+  .host-name {
+    font-family: Montserrat;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: right;
+    color: #ff6060; /* Color rojo */
+    display: flex;
+  flex-direction: column;
+  }
+  
+  /* Estilos para las estrellas de rating */
+  .host-rating {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  /* Estilos para las estrellas individuales */
+  .star {
+    display: inline-block;
+    width: 24.75px;
+    height: 24.75px;
+    font-size: 24.75px;
+    color: gray; /* Color gris por defecto */
+  }
+  
+  /* Estilos para las estrellas activas (en rojo) */
+  .star.active {
+    color: #ff6060; /* Color rojo */
+  }
+  
+  /** listas desplegables **/
+  .listas {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 1240px;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  
+  /* Estilos para los botones de mostrar/ocultar */
+  .toggle-button {
+    width: 582px;
+    height: 52px;
+    border-radius: 10px;
+    background: #ff6060;
+    color: #fff;
+    border: none;
+    padding-left: 20px;
+    padding-right: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .toggle-button .arrow {
+    width: 24px;
+    height: 13.71237850189209px;
+    background: #fff;
+    clip-path: polygon(0% 0%, 50% 100%, 100% 0%);
+    transition: transform 0.9s ease-in-out;
+  }
+  
+  /* Cambiar la dirección de la flecha cuando el contenido está activo */
+  .toggle-button.active .arrow {
+    transform: rotate(180deg);
+  }
+  
+  /* Estilos para el contenido que se muestra al hacer clic */
+  .toggle-content {
+    display: none;
+    background-color: #e3e3e3;
+    padding: 10px 20px;
+    /* Agregamos padding horizontal de 20px y padding vertical de 10px */
+    border-radius: 10px;
+    margin-top: 0px;
+    width: 545px; /* Mismo ancho que el botón */
+    height: 150px;
+    align-items: left
+    ;
+  }
+  
+  /* Mostrar el contenido cuando el botón está activo */
+  .toggle-content.active {
+    display: block;
+    color: #ff6060; /* Color de texto rojo */
+  }
+ 
+  
+  .oki {
+
+    display: flex;
+    flex-direction: column;
+  }
+
+
+  .listas ul {
+    list-style-type: none;
+    padding-left: 0; /* Este quita el padding predeterminado */
+  }
+
+  @media (max-width: 768px) {
+
+    .carousel {
+      position: relative;
+      width: 80%;
+      height: 270px;
+      overflow: hidden;
+    
+      align-items: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    
+    .carousel-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;/* Ajustar la imagen para que llene el contenedor */
+      
+    }
+    .carousel-button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      font-size: 20px;
+      cursor: pointer;
+      z-index: 1;
+      color: #e3e3e3;
+    }
+    .carousel-button-prev {
+      left: 0;
+    }
+    
+    .carousel-button-next {
+      right: 0;
+    }
+    .indicator {
+      position: absolute;
+      bottom: 10px;
+      background-color: none;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 5px;
+      right: 40%;
+    }
+    
+    
+    /** le reste **/
+      
+      .gauchedroiteinfo {
+      
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        align-items: start;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+    
+      }
+      
+      
+      /* Estilos para la sección del título, ubicación y tags */
+      .gauche {
+        font-family: Montserrat;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 51px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: #ff6060;
+        margin-bottom: 5px;
+      }
+      
+      .location {
+        font-family: Montserrat;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 26px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: #ff6060;
+        margin-bottom: 10px;
+      }
+      
+      .tags {
+        display: flex;
+        gap: 10px;
+      }
+      
+      
+      /* Estilos para la sección del anfitrión */
+      .droite {
+        width: 100%;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        
+      }
+      
+      /* Estilos para el contenedor de la foto del host */
+      .host {
+       
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-top: 20px;
+        gap: 10px;
+      }
+      
+      /* Estilos para la foto del host en un círculo */
+      .host-picture {
+        width: 54px;
+        height: 54px;
+        object-fit: cover;
+        border-radius: 50%;
+        margin-right: 10px;
+      }
+      .host-lastname {
+        margin-top: 5px;
+      }
+      
+      
+      /* Estilos para el nombre del host */
+      .host-name {
+        font-family: Montserrat;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 26px;
+        letter-spacing: 0em;
+        text-align: right;
+        color: #ff6060; /* Color rojo */
+        display: flex;
+      flex-direction: column;
+      }
+      
+      /* Estilos para las estrellas de rating */
+      .host-rating {
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+      }
+      
+      /* Estilos para las estrellas individuales */
+      .star {
+        display: inline-block;
+        width: 14.75px;
+        height: 14.75px;
+        font-size: 14.75px;
+        color: gray; /* Color gris por defecto */
+      }
+      
+      /* Estilos para las estrellas activas (en rojo) */
+      .star.active {
+        color: #ff6060; /* Color rojo */
+      }
+      
+      /** listas desplegables **/
+      .listas {
+        display: flex;
+        flex-direction: column;
+       width: 90%;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+      
+      /* Estilos para los botones de mostrar/ocultar */
+      .toggle-button {
+        width: 310px;
+        height: 32px;
+        border-radius: 10px;
+        background: #ff6060;
+        color: #fff;
+        border: none;
+        padding-left: 20px;
+        padding-right: 10px;
+        margin-top: 10px;
+        cursor: pointer;
+        font-family: Montserrat;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 26px;
+        letter-spacing: 0em;
+        text-align: left;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      
+      .toggle-button .arrow {
+        width: 24px;
+        height: 13.71237850189209px;
+        background: #fff;
+        clip-path: polygon(0% 0%, 50% 100%, 100% 0%);
+        transition: transform 0.9s ease-in-out;
+      }
+      
+      /* Cambiar la dirección de la flecha cuando el contenido está activo */
+      .toggle-button.active .arrow {
+        transform: rotate(180deg);
+      }
+      
+      /* Estilos para el contenido que se muestra al hacer clic */
+      .toggle-content {
+        display: none;
+        background-color: #e3e3e3;
+        padding: 10px 20px;
+        /* Agregamos padding horizontal de 20px y padding vertical de 10px */
+        border-radius: 10px;
+        margin-top: 0px;
+        width: 260px; /* Mismo ancho que el botón */
+        height: 150px;
+        margin-left: 5px;
+      }
+      
+      /* Mostrar el contenido cuando el botón está activo */
+      .toggle-content.active {
+        display: block;
+        color: #ff6060; /* Color de texto rojo */
+      }
+     
+      
+      .oki {
+    
+        display: flex;
+        flex-direction: column;
+      }
+    
+      .oko {
+        list-style-type : none; /* Quitar los puntos del ul */
+      text-align: left; /* Alinear el texto a la izquierda */
+      text-decoration: none;
+      }
+
+  }

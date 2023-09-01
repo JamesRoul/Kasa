@@ -1,0 +1,45 @@
+.footer {
+     /* Ancho completo */
+    width: 100%;
+    height: 209px; /* Altura especificada */
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: black; /* Fondo negro */
+    display: flex;
+    flex-direction: column; /* Organiza los elementos en columna */
+    align-items: center; /* Centra los elementos horizontalmente */
+    justify-content: center; /* Centra los elementos verticalmente */
+
+}
+
+.footer-logo {
+    width: 122px;
+    height: 39.44px;
+    margin-bottom: 16px; /* Espacio entre el logo y el texto */
+}
+
+.footer-text {
+    width: 513px;
+    height: 45px;
+    color: white; /* Texto blanco */
+    text-align: center; /* Centra el texto */
+    font-size: 16px; /* Ajusta según necesites */
+}
+
+@media (max-width: 768px) {
+    
+    .footer {
+        width: 100%; /* Ancho total de la ventana */
+        margin-left: 0; /* Sin margen izquierdo */
+        margin-right: 0; /* Sin margen derecho */
+        padding: 0; /* Sin relleno */
+    }
+    .footer-text {
+        width: 100%;
+        height: 45px;
+        color: white; /* Texto blanco */
+        text-align: center; /* Centra el texto */
+        font-size: 16px; /* Ajusta según necesites */
+    }
+}
