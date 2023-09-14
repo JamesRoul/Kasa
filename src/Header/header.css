@@ -10,6 +10,7 @@
     color: #FF6060; /* Cambiado a rojo específico */
     padding: 1rem 2rem;
     padding-top: 50px;
+    
    
 }
 
@@ -44,33 +45,32 @@
 /* Media Query para pantallas con un ancho máximo de 768px */
 @media (max-width: 768px) {
 
-    #root {
-        width: 100%;
-    }
-    body {
-        width: 100%;
-        margin: auto;
-    }
+    * {
+        margin-right: 0px;
+        box-sizing: border-box;
+      }
+
+    
     .header {
-        width: 100%; /* Ancho especificado */
+       width: 90%; /* Ancho especificado */
         height: 48px; 
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: space-between;
         
         background-color: white;
         color: #FF6060; /* Cambiado a rojo específico */
-        padding: 1rem 2rem;
-        padding-top: 30px;
-        gap: 50px;
-       left: 0;
-        padding-left: 0;
-        padding-right: 0;
-       
+  margin-left: 5%;
+  margin-right: 5%;
+        padding-top: 60px;
+        padding-bottom: 30px;
+        
+        gap: 0px;
+      
     }
     
     .logo img {
-        width: 130px;
+        width: 100px;
         height: 48px;
        
     }
@@ -79,7 +79,8 @@
         display: flex;
         flex-direction: row;
         justify-content: center;
-        gap: 5px;
+        gap: 0;
+        
         
     }
     
@@ -89,10 +90,10 @@
         font-weight: 500;
         line-height: 34px;
         letter-spacing: 0em;
-        text-align: right;
+        text-align: center;
         color: #FF6060; /* Cambiado a rojo específico */
         text-decoration: none;
-        padding: 0;
+       
         
        
         margin-bottom: 10px;

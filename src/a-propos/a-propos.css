@@ -11,6 +11,7 @@
   height: 223px;
   border-radius: 10px;
   overflow: hidden;
+  margin-bottom: 30px;
 }
 
 .opp {
@@ -35,6 +36,9 @@
   justify-content: center;
   margin: 10px auto;
 }
+.button-wrapper{
+  font-family: 'Montserrat', sans-serif;
+}
 
 .toggle-button {
   width: 100%;
@@ -45,7 +49,7 @@
   border: none;
   margin-top: 10px;
   cursor: pointer;
-  font-family: Montserrat;
+  font-family: 'Montserrat', sans-serif;
   font-size: 18px;
   font-weight: 500;
   line-height: 26px;
@@ -63,15 +67,20 @@
   margin-top: 10px;
   width: 100%;
   text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  
 }
 
 .toggle-button.active {
   background-color: #ff4040;
+  font-family: 'Montserrat', sans-serif;
+ 
 }
 
 .toggle-content.active {
   display: block;
   color: #ff6060;
+  height: auto;
 }
 
 /* Diseño responsivo */
