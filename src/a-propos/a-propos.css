@@ -25,7 +25,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  width: 35%;
+  margin: auto;
 }
 
 .button-wrapper {
@@ -82,6 +83,19 @@
   color: #ff6060;
   height: auto;
 }
+
+.collapse-content {
+  padding: 10px;
+  background-color: #e3e3e3; /* Fondo gris para el contenido desplegable */
+  color: #ff6060; /* Color de letra rojo para el contenido desplegable */
+  display: block; 
+  transition: max-height 0.3s ease-in-out;
+  
+  width: 100%;
+  height: auto;
+}
+
+
 
 /* Diseño responsivo */
 @media (max-width: 768px) {

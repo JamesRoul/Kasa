@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import './AnnonceDetails.css';
 import annoncesData from '../Main/annonces.json';
 import Erreur from '../Erreur/Erreur'; // Importa el componente de error
+import Collapse from '../collapse/collapse';
 
 function AnnonceDetails() {
   const { id } = useParams();
@@ -70,33 +71,21 @@ function AnnonceDetails() {
       </div>
 
       <div className='listas'>
-        {[0, 1].map((buttonIndex) => (
-          <div key={buttonIndex} className='oki'>
-            <button className={`toggle-button ${selectedButton === buttonIndex ? 'active' : ''}`} onClick={() => buttonClickHandler(buttonIndex)}>
-              {buttonIndex === 0 ? 'Description' : 'Equipements'}
-              <div className={`arrow ${selectedButton === buttonIndex ? 'arrow-up' : ''}`}></div>
-            </button>
-            {selectedButton === buttonIndex && (
-              <div className={`toggle-content active`}>
-                {buttonIndex === 0 && (
-                  <div className="description">
-                    <p>{annonce.description}</p>
-                  </div>
-                )}
-                {buttonIndex === 1 && (
-                  <div className="equipements">
-                    <ul>
-                      {annonce.equipments.map((equipment, index) => (
-                        <li key={index}>{equipment}</li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
-              </div>
-            )}
-          </div>
-        ))}
-      </div>
+          <Collapse label="Description">
+            <div className="description collaps-container">
+              <p>{annonce.description}</p>
+            </div>
+          </Collapse>
+          <Collapse label="Equipements">
+            <div className="equipements collaps-container">
+              <ul>
+                {annonce.equipments.map((equipment, index) => (
+                  <li key={index}>{equipment}</li>
+                ))}
+              </ul>
+            </div>
+          </Collapse>
+       </div>
     </div>
   );
 }

@@ -176,19 +176,25 @@
   
   /** listas desplegables **/
   .listas {
+    width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+  
     max-width: 1240px;
-    align-items: center;
-    margin-left: auto;
-    margin-right: auto;
+   
+   
+    
     padding-top: 15px;
     padding-bottom: 15px;
     font-family: 'Montserrat', sans-serif;
-  
-
-
+     /* Distribuirá el espacio alrededor de los elementos */
+     justify-content: space-between; /* Centra los elementos en el eje principal */
+    
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center; 
+    
+      
   }
 
   .button-wrapper{
@@ -197,7 +203,9 @@
   
   /* Estilos para los botones de mostrar/ocultar */
   .toggle-button {
-    width: 582px;
+    
+    max-width: 582px;
+    width: 100%;
     height: 52px;
     border-radius: 10px;
     background: #ff6060;
@@ -217,6 +225,7 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 30px;
+   
   }
   
   .toggle-button .arrow {
@@ -240,10 +249,10 @@
     /* Agregamos padding horizontal de 20px y padding vertical de 10px */
     border-radius: 10px;
     margin-top: 0px;
-    width: 545px; /* Mismo ancho que el botón */
+    max-width: 582px; /* Mismo ancho que el botón */
     height: 150px;
-    align-items: left
-    ;
+    align-items: left;
+    margin: 0 auto;
   }
   
   /* Mostrar el contenido cuando el botón está activo */
@@ -269,6 +278,22 @@
     width: auto;
     padding-left: 10px;
     padding-right: 10px;
+  }
+
+  .collapse-content {
+    padding: 10px;
+    background-color: #e3e3e3; /* Fondo gris para el contenido desplegable */
+    color: #ff6060; /* Color de letra rojo para el contenido desplegable */
+    display: block; 
+    transition: max-height 0.3s ease-in-out;
+    
+    width: 562px;
+    height: auto;
+  }
+  
+  .collaps-container {
+
+    max-width: 582px;
   }
 
   @media (max-width: 768px) {
@@ -488,7 +513,7 @@
         margin-top: 0px;
         width: 100%; /* Mismo ancho que el botón */
         height: 150px;
-        margin-left: 5px;
+        margin-left: 0px;
         margin-top: 0;
       }
       
